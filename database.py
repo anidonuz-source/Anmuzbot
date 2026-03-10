@@ -1,18 +1,16 @@
 import pymysql
 
-# ================= MySQL bilan ulanish =================
 try:
-db = pymysql.connect(
-    host="mysql.railway.app",
-    user="root",
-    password="parol",
-    database="anime_bot",
-    port=3306,
-    cursorclass=pymysql.cursors.DictCursor
-)
+    db = pymysql.connect(
+        host="127.0.0.1",
+        user="root",
+        password="",
+        database="anime_bot",
+        charset="utf8mb4",
+        cursorclass=pymysql.cursors.DictCursor
+    )
 except Exception as e:
     print("❌ Ulanishda xatolik:", e)
-    exit()
 
 cursor = db.cursor()
 
@@ -101,3 +99,4 @@ def update_setting(field, value):
     cursor.execute(f"UPDATE settings SET {field}=%s WHERE id=1", (value,))
 
     db.commit()
+
