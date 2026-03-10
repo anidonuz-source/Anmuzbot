@@ -1,2 +1,3 @@
-aiohttp
-aiogram>=3.4.0
+aiogram
+pymysql
+asyncio
