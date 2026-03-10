@@ -22,7 +22,7 @@ import database
 
 
 BOT_TOKEN = "ozingizn bot tokenz olib joylashsz"
-ADMIN_ID = #admin id qoyiladi
+ADMIN_ID = 7607916773
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -1099,5 +1099,6 @@ async def save_setting_value(message: Message, state: FSMContext):
 
     await message.answer("✅ Sozlama saqlandi!")
     await state.clear()
+
 
 
